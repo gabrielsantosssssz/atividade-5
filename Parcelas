@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parcelas</title>
+</head>
+<body>
+    <script>
+        function calcularParcelas(){
+            let valortotal = parseFloat(document.getElementById("valortotal").value)
+            let quantidadeParcelas= parseFloat(document.getElementById("quantidadeparcelas").value)
+            let juros = 0;
+            
+         
+        if(Quantidadeparcelas >= 1 && quantidadeparcelas <= 3 ){
+            juros= 0
+          }else if(quantidadeParcelas >= 4&& quantidadeParcelas <=6){
+              juros = 0.02; }else if(quantidadeParcelas <=12){
+                  juros = 0.05 }
+               else{
+                  alert("quantidade de parcelas invalidas! escolhe entre 1 e 12.");return;
+              } let valorcomjuros = valortotal* (1 + juros);
+
+          }
+    </script>
+</body>
+</html>
