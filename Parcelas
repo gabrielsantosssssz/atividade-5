@@ -1,29 +1,30 @@
 <!DOCTYPE html>
-<html lang="pt_br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>parcelas</title>
+    <title>Maior Número</title>
+    <script>
+        function verificarMaior() {
+            const num1 = parseInt(document.getElementById("num1").value);
+            const num2 = parseInt(document.getElementById("num2").value);
+            let resultado;
+
+            if (num1 > num2) {
+                resultado = "O maior número é: " + num1;
+            } else if (num1 < num2) {
+                resultado = "O maior número é: " + num2;
+            } else {
+                resultado = "Os números são iguais.";
+            }
+            document.getElementById("resultado").value = resultado;
+        }
+    </script>
 </head>
 <body>
-    <script>
-        function calcularParcelas(){
-            let valortotal = parseFloat(document.getElementById("valortotal").value)
-            let quantidadeParcelas= parseFloat(document.getElementById("quantidadeparcelas").value)
-            let juros = 0;
-            
-         
-        if(Quantidadeparcelas >= 1 && quantidadeparcelas <= 3 ){
-            juros= 0
-          }else if(quantidadeParcelas >= 4&& quantidadeParcelas <=6){
-              juros = 0.02; }else if(quantidadeParcelas <=12){
-                  juros = 0.05 }
-               else{
-                  alert("quantidade de parcelas invalidas! escolhe entre 1 e 12.");return;
-              } let valorcomjuros = valortotal* (1 + juros);
-
-          }
-    </script>
+    <h1>Maior Número</h1>
+    <input type="number" id="num1" placeholder="Digite o primeiro número">
+    <input type="number" id="num2" placeholder="Digite o segundo número">
+    <button onclick="verificarMaior()">Verificar</button>
+    <input type="text" id="resultado" readonly>
 </body>
 </html>
