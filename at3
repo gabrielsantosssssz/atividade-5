@@ -1,1 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Média do Aluno</title>
+    <script>
+        function calcularMedia() {
+            const nota1 = parseFloat(document.getElementById("nota1").value);
+            const nota2 = parseFloat(document.getElementById("nota2").value);
+            const nota3 = parseFloat(document.getElementById("nota3").value);
+            const media = (nota1 + nota2 + nota3) / 3;
+            let conceito;
 
+            if (media >= 6) {
+                conceito = "Aprovado";
+            } else if (media >= 4) {
+                conceito = "Exame";
+            } else {
+                conceito = "Reprovado";
+            }
+
+            document.getElementById("resultado").value = "Média: " + media + ", Conceito: " + conceito;
+        }
+    </script>
+</head>
+<body>
+    <h1>Cálculo da Média do Aluno</h1>
+    <input type="number" id="nota1" placeholder="Digite a 1ª nota">
+    <input type="number" id="nota2" placeholder="Digite a 2ª nota">
+    <input type="number" id="nota3" placeholder="Digite a 3ª nota">
+    <button onclick="calcularMedia()">Calcular</button>
+    <input type="text" id="resultado" readonly>
+</body>
+</html>
